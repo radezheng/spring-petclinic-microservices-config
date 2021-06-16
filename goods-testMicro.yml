@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    druid:
+      transaction-query-timeout: 6000
+      min-idle: 5
+      max-active: 10
+      filters: stat,config
+      initial-size: 8
+      remove-abandoned-timeout: 1800
+      query-timeout: 6000
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://b-test2.mysql.database.chinacloudapi.cn:3306/galanz?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: xxxx
+    password: xxxxx
+  redis:
+    host: b-test2.redis.cache.chinacloudapi.cn
+    password: xxxxxx=
+oauth:
+  grant-type: password
+  client-secret: 123456
+  scope: read write
+  token-check-url: http://127.0.0.1:8089/token/check
+  client-id: clientapp
+  server-url: http://127.0.0.1:8089/oauth/token
+logging:
+  level:
+    com.glz.cloud: debug
