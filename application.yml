@@ -1,7 +1,7 @@
 # COMMON APPLICATION PROPERTIES
 application: 
   message: Hello from config Server!
-  
+
 server:
   # start services on random port by default
   port: 0
@@ -28,6 +28,12 @@ spring:
       ddl-auto: none
   jmx:
     enabled: true
+
+spring:
+  cloud:
+    config:
+      auto-refresh: true
+      refresh-interval: 10
 
 # Spring Boot 1.5 makes actuator secure by default
 management.security.enabled: false
