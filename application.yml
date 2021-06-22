@@ -1,5 +1,7 @@
 # COMMON APPLICATION PROPERTIES
-
+application: 
+  message: Hello from config Server!
+  
 server:
   # start services on random port by default
   port: 0
