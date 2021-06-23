@@ -1,4 +1,4 @@
-TESTENV: ${TESTENV}
+TESTENV: ${TEST-ENV}
 
 azure:
   keyvault:
